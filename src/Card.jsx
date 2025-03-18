@@ -6,7 +6,7 @@ export default function Card() {
     let min = 1;
     let max = 151;
 
-    console.log(pokemonData)
+    
 
     React.useEffect(() => {
         let num = Math.random() * (max - min) + min;
@@ -15,11 +15,13 @@ export default function Card() {
         .then (res => res.json())
         .then(data => setPokemonData(data))
     },[])
+    console.log(pokemonData)
 
 
     return (
         <main>
-            <h1>It works</h1>
+         <h1>{pokemonData.name? pokemonData.name.toUpperCase() :"Loading..."}</h1>
+            
         </main>
     )  
 }
