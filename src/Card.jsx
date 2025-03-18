@@ -21,6 +21,7 @@ export default function Card() {
     return (
         <main>
          <h1>{pokemonData.name? pokemonData.name.toUpperCase() :"Loading..."}</h1>
+         <img src={pokemonData.sprites?.front_default} alt={pokemonData.name} />
             
         </main>
     )  
