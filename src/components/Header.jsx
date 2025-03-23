@@ -1,5 +1,7 @@
 export default function Header() {
     return (
-        <header>Pokemon Game</header>
+        <header>
+           <h1>Pokedex</h1> 
+            </header>
     )
 }
