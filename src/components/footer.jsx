@@ -1,5 +1,5 @@
 export default function Footer() {
     return (
-        <footer>Made using React</footer>
+        <footer><button>Randomise</button></footer>
     )
 }

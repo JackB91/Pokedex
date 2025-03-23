@@ -19,9 +19,11 @@ export default function Card() {
 
 
     return (
-        <main>
+        <main className='card'>
          <h1>{pokemonData.name? pokemonData.name.toUpperCase() :"Loading..."}</h1>
          <img src={pokemonData.sprites?.front_default} alt={pokemonData.name} />
+         <p>Move goes here</p>
+         <p>Move goes here</p>
             
         </main>
     )  
