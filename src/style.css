@@ -3,7 +3,6 @@ font-size: 5rem;
 margin-top: 0;
 margin-bottom: .2rem;
 text-decoration: underline;
-
 color: yellow;
 text-shadow: 
 -1.5px -1.5px 0 blue,  
@@ -18,5 +17,11 @@ font-style: italic;
     flex-wrap: wrap;  
     justify-content: center;  
     gap: 10px;  
+}
+
+.pokedex-container img:hover {
+    transform: scale(1.2);
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
 }
 

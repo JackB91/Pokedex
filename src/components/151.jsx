@@ -26,11 +26,6 @@ export default function Kanto () {
 
 
 
-// return (
-//     <main className='card'> 
-//      <img src={pokemonData.sprites?.front_default} alt={pokemonData.name} /></main>
-// )
-
 return (
     <main className="pokedex-container">
       {pokemonData.map((pokemon) => (
