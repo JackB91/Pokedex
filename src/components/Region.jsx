@@ -1,8 +1,6 @@
 import React from 'react' 
 
-export default function PokemonRegion ({min,max}) {
-
-    const [pokemonData, setPokemonData] = React.useState([])
+export default function Region ({min,max,pokemonData,setPokemonData}) {
 
     React.useEffect(() => {
 
