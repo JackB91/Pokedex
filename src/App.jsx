@@ -19,7 +19,7 @@ return (
                  pokemonData ={pokemonData}
                  setPokemonData ={setPokemonData}
                  />
-            <Footer/>
+            {/* <Footer/> */}
     </main>
 )
 

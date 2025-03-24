@@ -1,5 +1,7 @@
 export default function Footer() {
     return (
-        <footer><button>Randomise</button></footer>
+        <footer>
+            <p>A simple React project to practice calling Apis and using React.</p>
+        </footer>
     )
 }

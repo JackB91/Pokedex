@@ -34,6 +34,7 @@ return (
             alt={pokemon.name}
             onClick={() => alert(`You clicked on ${pokemon.name}!`)} // You can add your click functionality here
           />
+          {/* <p>{pokemon.name.toUpperCase()}</p> Maybe add each name in future */}
         </div>
       ))}
     </main>
