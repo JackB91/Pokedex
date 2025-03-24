@@ -1,6 +1,6 @@
 import React from 'react' 
 
-export default function Kanto () {
+export default function PokemonRegion ({min,max}) {
 
     const [pokemonData, setPokemonData] = React.useState([])
 
@@ -9,7 +9,8 @@ export default function Kanto () {
         const fetchData = async() => {
 
         const pokemonInfo =[];
-        for (let i =1; i<=151;i++) {
+        
+        for (let i =min; i<=max;i++) {
             pokemonInfo.push(fetch(`https://pokeapi.co/api/v2/pokemon/${i}`).then(res => res.json()));
         }
 
@@ -19,7 +20,7 @@ export default function Kanto () {
     }
 
     fetchData()
-},[])
+},[min,max])
 
 
 
