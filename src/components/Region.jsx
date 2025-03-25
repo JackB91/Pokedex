@@ -1,6 +1,6 @@
 import React from 'react' 
 
-export default function Region ({min,max,pokemonData,setPokemonData}) {
+export default function Region ({min,max,pokemonData,setPokemonData,setSelectedPokemon}) {
 
     React.useEffect(() => {
 
@@ -32,7 +32,8 @@ return (
           <img
             src={pokemon.sprites.front_default}
             alt={pokemon.name}
-            onClick={() => alert(`You clicked on ${pokemon.name}!`)} // You can add your click functionality here
+            // onClick={() => alert(`You clicked on ${pokemon.name}!`)} 
+            onClick={() => setSelectedPokemon(pokemon)}
           />
           {/* <p>{pokemon.name.toUpperCase()}</p> Maybe add each name in future */}
         </div>
