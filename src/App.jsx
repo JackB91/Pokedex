@@ -23,7 +23,8 @@ return (
                  setSelectedPokemon = {setSelectedPokemon}
                  />
 
-                 TODO: {selectedPokemon && <PokemonCard pokemon={selectedPokemon}/>}
+                 {/* TODO: {selectedPokemon && <PokemonCard pokemon={selectedPokemon}/>} */}
+                 {selectedPokemon ? <PokemonCard pokemon={selectedPokemon}/>:null}
             {/* <Footer/> */}
     </main>
 )

@@ -29,7 +29,7 @@ return (
 
 
         <p>Type: {pokemon.types.map(t => t.type.name).join(", ")}</p>
-        {/* <p>Moves: {pokemon.moves.slice(0, 5).map(m => m.move.name).join(", ")}</p> */}
+        <p>Moves: {pokemon.moves.slice(0, 5).map(m => m.move.name).join(", ")}</p>
         
     </div>
 )
