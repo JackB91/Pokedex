@@ -10,11 +10,12 @@ export default function App() {
     const [region, setRegion] = useState({min:1, max:151})
     const [pokemonData, setPokemonData] = useState([])
     const [selectedPokemon, setSelectedPokemon]= useState(null)
+    console.log("Selected Pokémon:", selectedPokemon);
 
 
 return (
     <main>
-            <Header setRegion={setRegion}/>
+            <Header setRegion={setRegion} setSelectedPokemon={setSelectedPokemon}/>
             <Region 
                  min={region.min} 
                  max={region.max}
