@@ -25,7 +25,7 @@ export default function App() {
 return (
     <main>
             <Header setRegion={setRegion} setSelectedPokemon={setSelectedPokemon}/>
-            <Region 
+            <Region
                  min={region.min} 
                  max={region.max}
                  pokemonData ={pokemonData}
