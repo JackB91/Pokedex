@@ -33,9 +33,7 @@ return (
                  setSelectedPokemon = {setSelectedPokemon}
                  />
 
-                 {/* TODO: {selectedPokemon && <PokemonCard pokemon={selectedPokemon}/>} */}
-                 {/* {selectedPokemon ? <PokemonCard pokemon={selectedPokemon}/>:null} */}
-
+        
                  {selectedPokemon && (
         <div className="modal-overlay" style={{ display: 'flex' }}>
           <div className="modal-content">
