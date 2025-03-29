@@ -12,6 +12,15 @@ export default function App() {
     const [selectedPokemon, setSelectedPokemon]= useState(null)
     console.log("Selected Pokémon:", selectedPokemon);
 
+    const closeModal = () => {
+        setSelectedPokemon(null);
+        document.body.classList.remove('blur-background');  // Remove background blur
+      };
+    
+    //   const openModal = () => {
+    //     document.body.classList.add('blur-background');  // Add background blur
+    //   };
+
 
 return (
     <main>
@@ -25,7 +34,18 @@ return (
                  />
 
                  {/* TODO: {selectedPokemon && <PokemonCard pokemon={selectedPokemon}/>} */}
-                 {selectedPokemon ? <PokemonCard pokemon={selectedPokemon}/>:null}
+                 {/* {selectedPokemon ? <PokemonCard pokemon={selectedPokemon}/>:null} */}
+
+                 {selectedPokemon && (
+        <div className="modal-overlay" style={{ display: 'flex' }}>
+          <div className="modal-content">
+            <button className="close-btn" onClick={closeModal}>
+              X
+            </button>
+            <PokemonCard pokemon={selectedPokemon} />
+          </div>
+        </div>
+      )}
             {/* <Footer/> */}
     </main>
 )

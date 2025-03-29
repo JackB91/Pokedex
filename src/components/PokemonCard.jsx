@@ -16,18 +16,13 @@ return (
         <p>Weight: {pokemon.weight/10}kg</p> */}
 
         <h3>Base Stats</h3>
-
         <ul>
             {pokemon.stats.map((s) => (
                 <li key={s.stat.name}>
                     {s.stat.name.toUpperCase()}: {s.base_stat} 
-                </li>)
-            )
+                </li>))
             }
         </ul>
-
-
-
         <p>Type: {pokemon.types.map(t => t.type.name).join(", ")}</p>
         <p>Moves: {pokemon.moves.slice(0, 5).map(m => m.move.name).join(", ")}</p>
         

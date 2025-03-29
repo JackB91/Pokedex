@@ -1,21 +1,87 @@
-html {
-    background-color: grey;  
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+  }
+  
+  header {
+    background-color: #4caf50; 
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100vw;
+    margin: 20px;
+  }
+
+  h1 {text-align: center;
+    font-size: 5rem;
+    margin-top: 0;
+    margin-bottom: .2rem;
+    
+    text-decoration: underline;
+    color: yellow;
+    text-shadow: 
+    -1.5px -1.5px 0 blue,  
+    1.5px -1.5px 0 blue,  
+    -1.5px 1.5px 0 blue,  
+    1.5px 1.5px 0 blue; 
+    font-style: italic;}
+  
+  
+  button {
+    background-color: #ffffff;
+    color: #4caf50; 
+    border: 2px solid #4caf50;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #8bd78e;
+    color: white;
+    transform: translateY(-3px)
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:active {
+    transform: translateY(1px); /* Slight press effect */
+  }
+  
+ 
+    /* Media Query for Mobile Devices */
+   @media (max-width: 600px) {
+    header {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
 }
 
 
-h1 {text-align: center;
-font-size: 5rem;
-margin-top: 0;
-margin-bottom: .2rem;
-text-decoration: underline;
-color: yellow;
-text-shadow: 
--1.5px -1.5px 0 blue,  
-1.5px -1.5px 0 blue,  
--1.5px 1.5px 0 blue,  
-1.5px 1.5px 0 blue; 
-font-style: italic;
-}
+
 
 .pokedex-container{
     display: flex;
@@ -93,3 +159,61 @@ font-style: italic;
 .pokemon-card p:last-child {
     font-weight: bold;
 }
+
+
+/* Modal (Pokémon Card) Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 10;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: rgba(244,244,244,0.9);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .modal-content h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  /* Background blur effect */
+  .blur-background {
+    filter: blur(5px); 
+    pointer-events: none; 
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
